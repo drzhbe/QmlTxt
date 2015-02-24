@@ -1,7 +1,7 @@
-- [Simple QML Module usage in QML file](#Simple QML Module usage in QML file)
-- [Singleton QML Module usage in QML file](#Singleton QML Module usage in QML file)
-- [JS file usage in QML file](#JS file usage in QML file)
-- [JS file usage in JS file](#JS file usage in JS file)
+- [Simple QML Module usage in QML file](#Simple-QML-Module-usage-in-QML-file)
+- [Singleton QML Module usage in QML file](#Singleton-QML-Module-usage-in-QML-file)
+- [JS file usage in QML file](#JS-file-usage-in-QML-file)
+- [JS file usage in JS file](#JS-file-usage-in-JS-file)
 
 # Simple QML Module usage in QML file
 
