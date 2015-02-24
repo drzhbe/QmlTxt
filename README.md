@@ -1,2 +1,2 @@
 # QmlTxt
-Qml texts
+Notes on QML
