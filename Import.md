@@ -45,7 +45,7 @@ QtObject {
 > ...
 > MyModule {
 >     id: myInitializedModule
-> }r
+> }
 > ...
 > ```
 
