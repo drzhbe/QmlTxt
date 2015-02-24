@@ -1,5 +1,6 @@
 - [Simple QML Module usage in QML file](#simple-qml-module-usage-in-qml-file)
 - [Singleton QML Module usage in QML file](#singleton-qml-module-usage-in-qml-file)
+- [QML file in JS file](#qml-file-in-js-file)
 - [JS file usage in QML file](#js-file-usage-in-qml-file)
 - [JS file usage in JS file](#js-file-usage-in-js-file)
 
@@ -84,6 +85,9 @@ QtObject {
 ### Note
 > - To make module a singleton use `pragma singleton` at start of file and the word `singleton` in `qmldir` before identifier
 > - There is no need to initialize module, simply use the identifier used in `qmldir` file (`MyModule`)
+
+# QML file in JS file
+There is [a way](http://doc.qt.io/qt-5/qtqml-javascript-imports.html#importing-a-qml-module-from-a-javascript-resource) to do it, but I didn't succeed making it work.
 
 # JS file usage in QML file
 
