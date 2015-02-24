@@ -7,6 +7,7 @@
 
 Structure
 ```
+-- Use.qml
 -- FOLDER
 ---- Module
 ------ qmldir
@@ -51,6 +52,7 @@ QtObject {
 
 Structure
 ```
+-- Use.qml
 -- FOLDER
 ---- Module
 ------ qmldir
@@ -87,15 +89,33 @@ QtObject {
 
 Structure
 ```
+-- Use.qml
+-- animal.js
 -- FOLDER
 ---- Module
 ------ qmldir
 ------ human.js
+------ robot.js
+```
+
+animal.js
+```js
+function AnimalConstructor(name) {
+    this.name = name;
+}
 ```
 
 human.js
 ```js
+.pragma library
 function HumanConstructor(name) {
+    this.name = name;
+}
+```
+
+robot.js
+```js
+function RobotConstructor(name) {
     this.name = name;
 }
 ```
@@ -103,15 +123,19 @@ function HumanConstructor(name) {
 qmldir
 ```qml
 Human 1.0 human.js
+Robot 1.0 robot.js
 ```
 
 Use.qml
 ```qml
 import FOLDER.Module 1.0
+import "animal.js" as Animal
 
 QtObject {
     property var human: new Human.HumanConstructor('vaska')
-    Component.onCompleted: console.log(human.name)
+    proverty var robot: new Robot.RobotConstructor('r2d2')
+    property var animal: new Animal.AnimalConstructor('petka')
+    Component.onCompleted: console.log(human.name, animal.name)
 }
 ```
 
@@ -120,6 +144,7 @@ QtObject {
 > - It is no difference between importing `library` and simple js file. The difference is that `library` file will share its context between any file, that will import it
 > - Js file names should start with lower case (`human.js`, not `Human.js`)
 > - File content will be able by `Human` identifier used in `qmldir`, so to use functions from file you should use `Human.HumanConstructor`
+> - When importing js file by `import "path/to/file.js"` you *have to* use qualifier (`as`)
 
 # JS file usage in JS file
 
