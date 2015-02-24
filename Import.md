@@ -44,7 +44,7 @@ QtObject {
 > ...
 > MyModule {
 >     id: myInitializedModule
-> }
+> }r
 > ...
 > ```
 
@@ -133,9 +133,9 @@ import "animal.js" as Animal
 
 QtObject {
     property var human: new Human.HumanConstructor('vaska')
-    proverty var robot: new Robot.RobotConstructor('r2d2')
+    property var robot: new Robot.RobotConstructor('r2d2')
     property var animal: new Animal.AnimalConstructor('petka')
-    Component.onCompleted: console.log(human.name, animal.name)
+    Component.onCompleted: console.log(human.name, robot.name, animal.name)
 }
 ```
 
