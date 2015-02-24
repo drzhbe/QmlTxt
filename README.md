@@ -1,0 +1,2 @@
+# QmlTxt
+Qml texts
