@@ -3,4 +3,4 @@
 * [`once`](https://gist.github.com/drzhbe/cacc4115f388d3753132) used in situations when `callback` should be called if `condition` or after `signal` emitted
 * (2gis v4android specific) You can not affect an `opacity` of `TextEditItem` because of `TextEditAndroidNative`
 * If some of `ListView`'s children will change `height` while `ListView`'s animation on `add` is running, `ListView`'s `contentHeight` will not update
-* `Element` on destruction will `null` the `parent` property first, so when you have some bindings on it, they will run
+* `Element` on destruction will `null` the `parent` property first, so when you have some bindings on it, they will run on this dying element with no `parent`
