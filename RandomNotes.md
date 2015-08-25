@@ -4,3 +4,19 @@
 * (2gis v4android specific) You can not affect an `opacity` of `TextEditItem` because of `TextEditAndroidNative`
 * If some of `ListView`'s children will change `height` while `ListView`'s animation on `add` is running, `ListView`'s `contentHeight` will not update
 * `Element` on destruction will `null` the `parent` property first, so when you have some bindings on it, they will run on this dying element with no `parent`
+* Properties initialized in order you pass them on use, not in order you define them in the component:
+  ```qml
+  // YourElement.qml
+  Item {
+    property string firstName
+    property string secondName
+  }
+
+  // Use.qml
+  import 'YourElement'
+  YourElement {
+    secondName: 'Vasiliev'
+    firstName: 'Vaska'
+  }
+  ```
+  At first `onSecondNameChanged` will fire, and then `onFirstNameChanged` will fire
