@@ -20,3 +20,4 @@
   }
   ```
   At first `onSecondNameChanged` will fire, and then `onFirstNameChanged` will fire
+* Program could fail in `.js` file without any error notifications and just continue execution :(
