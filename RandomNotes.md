@@ -20,4 +20,4 @@
   }
   ```
   At first `onSecondNameChanged` will fire, and then `onFirstNameChanged` will fire
-* Program could fail in `.js` file without any error notifications and just continue execution :(
+* Program could fail in `.js` file without any error notifications. I suspect that this js file executes in `binding` in c++ code and exception can be catched somewhere there
