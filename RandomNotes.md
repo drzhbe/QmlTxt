@@ -21,4 +21,4 @@
   ```
   At first `onSecondNameChanged` will fire, and then `onFirstNameChanged` will fire
 * Program could fail in `.js` file without any error notifications. I suspect that this js file executes in `binding` in c++ code and exception can be catched somewhere there
-* `QtObject` doesn't have `parent` property, even if you create it inside something.
+* `QtObject` doesn't have `parent` property, even if you create it inside some element or create it via `component.createObject(parent)`. The only qml-like property it has is `objectName`
