@@ -22,10 +22,3 @@
   ```
   At first `onSecondNameChanged` will fire, and then `onFirstNameChanged` will fire
 * Program could fail in `.js` file without any error notifications. I suspect that this js file executes in `binding` in c++ code and exception can be catched somewhere there
-* StackView: in every transition (push, pop or replace) animation will be used from target page
-
-  pop ← | → push | .. | ..
-  --- | --- | --- | ---
-  show enter (From) | hide exit (From) | .. | ..
-  From | ThroughContainer1 | ThroughContainer2 | Target
-
