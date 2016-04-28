@@ -22,3 +22,5 @@
   ```
   At first `onSecondNameChanged` will fire, and then `onFirstNameChanged` will fire
 * Program could fail in `.js` file without any error notifications. I suspect that this js file executes in `binding` in c++ code and exception can be catched somewhere there
+* Compile and Create. If you define Component on the page, it will be *compiled*. If you initialize it on the page it will also be *created*. If you pass an url to Loader.source it will be *compiled* and *created* only after source will be set.
+
