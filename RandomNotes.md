@@ -1,4 +1,4 @@
-* There are not allowed 2 signleton declarations in 1 qmldir file
+* There are not allowed 2 singleton declarations in 1 qmldir file
 * **Compile** and **Create**. If you define Component on the page, it will be *compiled*. If you initialize it on the page it will also be *created*. If you pass an url to Loader.source it will be *compiled* and *created* only after source will be set. Alse you can imperatively create component `var compo = Qt.createComponent(...)` and then `compo.createObject(...)` to achieve synchronous lazy object creation
 * `flick` will be canceled (`cancelFlick()` called internally) after `ListModel.clear()`
 * `QtObject` doesn't have `parent` property, even if you create it inside some element or create it via `component.createObject(parent)`. The only qml-like property it has is `objectName`
